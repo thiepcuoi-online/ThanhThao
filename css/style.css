@@ -1,0 +1,36 @@
+#my-button{
+    background:#92b7f0;
+    color:#fff;
+    border:none;
+    position:relative;
+    height:60px;
+    font-size:1.6em;
+    padding:0 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+  }
+  #my-button:hover{
+    background:#fff;
+    color:#92b7f0;
+  }
+  #my-button:before,#my-button:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #92b7f0;
+    transition:400ms ease all;
+  }
+  #my-button:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  #my-button:hover:before,#my-button:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
