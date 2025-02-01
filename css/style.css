@@ -37,11 +37,10 @@
     transition:800ms ease all;
   }
 
-/* #dear{
-    font-size: 1.5em;
-    color: #000000;
-    font-weight: bold;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-family: var(--title-font);
-} */
+#dear-text {
+  text-shadow: 
+  1px 1px 0 rgb(255, 255, 255),    /* Viền bên phải và bên dưới */
+  -1px -1px 0 rgb(255, 255, 255),  /* Viền bên trái và bên trên */
+  1px -1px 0 rgb(255, 255, 255),   /* Viền bên trên bên phải */
+  -1px 1px 0 rgb(255, 255, 255);   /* Viền bên dưới bên trái */
+}
