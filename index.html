@@ -36,27 +36,30 @@
 
 <body>
     <!-- Welcome Page -->
-    <!-- <div class="loading-page" id="welcome" style="opacity: 1; position:relative;">
+    <div class="loading-page" id="welcome" style="opacity: 1; position:relative;">
         <div class="d-flex justify-content-center align-items-center" style="height: 100vh !important;">
-
             <div class="text-center">
                 <div style="width: 70vh; display: flex;">
                     <img src="./img/69407505_O678.png" alt="bg">
                 </div>
-                <div style="position:absolute; bottom: 140px; left: 4%;">
-                    <button id="my-button" type="button" onclick="moveToMain(this)">
-                        <i class="fa-solid fa-envelope-open me-2"></i>Xem Thiệp
+                <div style="position: absolute; bottom: 50px; left: 50%; transform: translateX(-50%);">
+                    <div id="dear">
+                        <p id = "dear-text" class="banner-text" style="font-size: 1.5rem; color: #272727; margin-bottom: 10px; font-family: var(--title-font); " ></p>
+                    </div>
+                    <button id="my-button" type="button"
+                        style="white-space: nowrap; padding: 10px 20px; max-width: 100%;" onclick="moveToMain(this)">
+                        <i class="fa-solid fa-envelope-open me-2"></i>Mở Thiệp
                     </button>
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 
-    <div class="container-fluid">
+    <div class="container-fluid hidden">
         <section id="banner" class="section-banner">
             <img src="img/thumb2.png" alt=""
-            class="bg-right aos-init aos-animate animate__animated animate__fadeInBottomRight" data-aos="fade-left"
-            data-aos-duration="2000" style="right: -550px;">
+                class="bg-right aos-init aos-animate animate__animated animate__fadeInBottomRight" data-aos="fade-left"
+                data-aos-duration="2000" style="right: -550px;">
             <img src="img/beu/top-right.png" alt=""
                 class="bg-right aos-init aos-animate animate__animated animate__fadeInBottomRight" data-aos="fade-left"
                 data-aos-duration="2000">
@@ -70,7 +73,8 @@
                 <img src="img/beu/leaf1.png" alt="" class="leaf-1">
                 <img src="img/beu/leaf2.png" alt="" class="leaf-2">
                 <h1 class="banner-title">SAVE THE DATE</h1>
-                <div class="banner-name uk-position-relative uk-position-z-index" style="font-family: var(--script-font);">
+                <div class="banner-name uk-position-relative uk-position-z-index"
+                    style="font-family: var(--script-font);">
                     Đào Long<br>
                     &amp;<br>
                     Thanh Thảo </div>
@@ -391,9 +395,7 @@
                 </div>
                 <div class="invitation">
                     <div class="invitation-container">
-                        <div class="invitation-card"> <img
-                                src="./img/section_time_line/cdcr2a.jpg"
-                                alt="" />
+                        <div class="invitation-card"> <img src="./img/section_time_line/cdcr2a.jpg" alt="" />
                             <h3 class="card-title uk-margin-remove">TƯ GIA NHÀ GÁI</h3>
                             <address class="uk-margin-remove">
                                 <p>Thôn Xuân Sơn, Trung Giã, Sóc Sơn, Hà Nội</p>
@@ -427,16 +429,15 @@
                                 <a href="#box-gift-codau" class="phone_number" data-fancybox>
                                     <i class="ri-image-circle-fill"></i>
                                 </a>
-                                <a href="https://maps.app.goo.gl/vGXtR2j9S2JAg2Bu6?g_st=com.google.maps.preview.copy" class="invi_map" target="_blank">
+                                <a href="https://maps.app.goo.gl/vGXtR2j9S2JAg2Bu6?g_st=com.google.maps.preview.copy"
+                                    class="invi_map" target="_blank">
                                     <i class="ri-map-2-fill"></i>
                                 </a>
                             </div>
 
 
                         </div>
-                        <div class="invitation-card"> <img
-                                src="./img/section_time_line/cdcr1a.jpg"
-                                alt="" />
+                        <div class="invitation-card"> <img src="./img/section_time_line/cdcr1a.jpg" alt="" />
                             <h3 class="card-title uk-margin-remove">TƯ GIA NHÀ TRAI</h3>
                             <address class="uk-margin-remove">
                                 <p>Ngách 7/3 đường An Thắng, TDP An Thắng, Biên Giang, Hà Đông , Hà Nội</p>
@@ -470,7 +471,8 @@
                                 <a href="#box-gift" class="phone_number" data-fancybox>
                                     <i class="ri-image-circle-fill"></i>
                                 </a>
-                                <a href="https://maps.app.goo.gl/zcwEXgJ4hLutA9NCA?g_st=com.google.maps.preview.copy" class="invi_map" target="_blank">
+                                <a href="https://maps.app.goo.gl/zcwEXgJ4hLutA9NCA?g_st=com.google.maps.preview.copy"
+                                    class="invi_map" target="_blank">
                                     <i class="ri-map-2-fill"></i>
                                 </a>
                             </div>
@@ -499,14 +501,15 @@
                     <div class="gift-container" id="gift-container">
                         <div class="gift-card">
                             <div class="gift-qr">
-                                <img src="img/section_gift/chure2a.jpg" alt="" class="groom_qr" style="max-width:100%" />
+                                <img src="img/section_gift/chure2a.jpg" alt="" class="groom_qr"
+                                    style="max-width:100%" />
                             </div>
                             <div class="gift-body">
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <div id="box-gift-codau">
                     <div class="gift-container" id="gift-container">
                         <div class="gift-card">
@@ -586,40 +589,57 @@
     <script src="./js2/comment-reply.min.js" id="comment-reply-js" async="" data-wp-strategy="async"></script>
 </body>
 <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get('to');
+    if (!!name) {
+        // Tạo lời chào
+        const greeting = `Thân gửi: ${name}`;
+
+        // Hiển thị lời chào
+        // alert(greeting);
+
+        // Hoặc để hiển thị trên trang web
+        document.getElementById('dear-text').innerText = greeting;
+        // document.body.innerHTML += `<h1>${greeting}</h1>`;
+    }
+    else {
+        document.getElementById('dear').style.display = 'none';
+    }
+
+
     var audio = $("#audio")[0];
     var playaudio = false;
-    $(".toggleAudio").find("i").toggleClass("ri-volume-up-fill")
+    // $(".toggleAudio").find("i").toggleClass("ri-volume-up-fill")
 
 
-
-    // const moveToMain = (button) => {
-    //     button.disabled = true;
-    //     audio.play();
-    //     opacity('welcome');
-    // }
+    const moveToMain = (button) => {
+        button.disabled = true;
+        opacity('welcome');
+    }
 
 
-    // const opacity = (nama) => {
-    //     let nm = document.getElementById(nama);
-    //     let op = parseInt(nm.style.opacity);
-    //     let clear = null;
+    const opacity = (nama) => {
+        audio.play();
+        let nm = document.getElementById(nama);
+        let op = parseInt(nm.style.opacity);
+        let clear = null;
 
-    //     clear = setInterval(() => {
-    //         if (op >= 0) {
-    //             nm.style.opacity = op.toString();
-    //             op -= 0.025;
-    //         } else {
-    //             clearInterval(clear);
-    //             clear = null;
-    //             nm.remove();
-    //             var main = document.querySelector(".container-fluid")
-    //             main.classList.remove('hidden')
-    //             $(".toggleAudio").find("i").toggleClass("ri-volume-up-fill")
-    //             AOS.refresh();
-    //             return;
-    //         }
-    //     }, 10);
-    // };
+        clear = setInterval(() => {
+            if (op >= 0) {
+                nm.style.opacity = op.toString();
+                op -= 0.025;
+            } else {
+                clearInterval(clear);
+                clear = null;
+                nm.remove();
+                var main = document.querySelector(".container-fluid")
+                main.classList.remove('hidden')
+                $(".toggleAudio").find("i").toggleClass("ri-volume-up-fill")
+                AOS.refresh();
+                return;
+            }
+        }, 10);
+    };
 
 
 
@@ -630,30 +650,30 @@
 
 
     // Sự kiện khi chạm vào màn hình
-    $(document).on("touchstart", function() {
-        if(!playaudio){
-            playaudio = true;
-            if (audio.paused) {
-                $(".toggleAudio").find("i").toggleClass("ri-volume-up-fill")
-                console.log("touchstart");
-                audio.play();
-            }
-        }
+    // $(document).on("touchstart", function() {
+    //     if(!playaudio){
+    //         playaudio = true;
+    //         if (audio.paused) {
+    //             $(".toggleAudio").find("i").toggleClass("ri-volume-up-fill")
+    //             console.log("touchstart");
+    //             audio.play();
+    //         }
+    //     }
 
-    });
+    // });
 
-    // Sự kiện khi lăn chuột
-    $(document).on("scroll", function() {
-        if(!playaudio){
-            playaudio = true;
-            if (audio.paused) {
-                console.log("scroll");
-                $(".toggleAudio").find("i").toggleClass("ri-volume-up-fill")
-                audio.play();
-            }
-        }
+    // // Sự kiện khi lăn chuột
+    // $(document).on("scroll", function() {
+    //     if(!playaudio){
+    //         playaudio = true;
+    //         if (audio.paused) {
+    //             console.log("scroll");
+    //             $(".toggleAudio").find("i").toggleClass("ri-volume-up-fill")
+    //             audio.play();
+    //         }
+    //     }
 
-    });
+    // });
 
     const countdownDate = new Date('2025-02-20T07:00:00').getTime();
 

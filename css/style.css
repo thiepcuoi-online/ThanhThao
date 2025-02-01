@@ -1,4 +1,5 @@
 #my-button{
+    border-radius: 5%;
     background:#92b7f0;
     color:#fff;
     border:none;
@@ -9,6 +10,7 @@
     cursor:pointer;
     transition:800ms ease all;
     outline:none;
+    /* right: -330%; */
   }
   #my-button:hover{
     background:#fff;
@@ -34,3 +36,12 @@
     width:100%;
     transition:800ms ease all;
   }
+
+/* #dear{
+    font-size: 1.5em;
+    color: #000000;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: var(--title-font);
+} */
