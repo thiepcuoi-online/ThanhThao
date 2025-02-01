@@ -674,6 +674,12 @@ select {
 
 }
 
+#box-gift-codau {
+
+    display: none;
+
+}
+
 .gift-container {
 
     display: grid;
